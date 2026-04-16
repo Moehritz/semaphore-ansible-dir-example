@@ -1,0 +1,7 @@
+---
+- name: Debug playbook
+  hosts: local
+  gather_facts: false
+
+  roles:
+    - create_file

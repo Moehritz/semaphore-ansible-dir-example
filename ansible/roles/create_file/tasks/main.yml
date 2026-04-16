@@ -1,0 +1,10 @@
+---
+- name: Create debug file
+  ansible.builtin.copy:
+    content: "{{ create_file_content }}\n"
+    dest: "{{ create_file_path }}"
+    mode: "0644"
+
+- name: Debug - show file path
+  ansible.builtin.debug:
+    msg: "File created at {{ create_file_path }}"
